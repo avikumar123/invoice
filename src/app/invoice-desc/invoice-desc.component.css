@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;    
+}
+.desc-header {
+    width: 90%;
+    margin: 20px auto 0 auto;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
+.si_no, .quant {
+    width: 8%;
+    display: inline-block;    
+}
+
+.hsn, .uom, .upi {
+    width: 10%;
+    display: inline-block;    
+}
+
+.desc_good {
+    width: 32%;
+    display: inline-block;    
+}
+
+.total_col {
+    width: 20%;
+    display: inline-block;    
+}
+
+.desc-items {
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px dashed #cdcdcd;
+    height: 30px;
+    line-height: 30px; 
+}
+
+.desc-items input{
+    text-align: center;
+}
+
+.desc_good input {
+    text-align: left !important;
+}
+
+input{
+    width: 100%;
+    border: none;
+    padding-left: 1%; 
+}
+
+input[id="addline"] {
+    width: 100px;
+    padding: 5px;
+    margin: 10px 0 0 70px;
+    color: #333;
+}
+
+.line-add
+{
+    height: 40px;
+}
+.line-add #addline
+{
+    display: none;
+}
+
+.line-add:hover #addline
+{
+    display: inline;
+}
+
+
+.total-section {
+    width: 30%;
+    float: right;
+    margin-right: 5%;
+}
+
+.total {
+    border-bottom: 1px solid #333;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+.total span:first-child {
+    width: 55%;
+    display: inline-grid;
+}
+
+.total span:nth-child(2) {
+    display: inline-grid;
+    width: 40%;
+    text-align: center;
+}

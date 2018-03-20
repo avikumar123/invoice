@@ -1,0 +1,33 @@
+<datalist id="uom_list">
+  <option value="No.">
+  <option value="Set">
+</datalist>
+
+<div class="desc-header">
+  <div class="si_no" >S.No</div>
+  <div class="hsn" >HSN/ <br>SAC</div>
+  <div class="desc_good" >Description of Goods</div>
+  <div class="quant" >Quantity</div>
+  <div class="uom" >UOM</div>
+  <div class="upi" >Unit Price <br>(inr)</div>
+  <div class="total_col" >Total <br>(inr)</div>
+</div>
+
+<div class="desc-items" *ngFor="let field of fieldArray; let i = index">
+  <div class="si_no desc-border" ><input type="number" min="0" /></div>
+  <div class="hsn desc-border" ><input type="text" /></div>
+  <div class="desc_good desc-border" ><input type="text" /></div>
+  <div class="quant desc-border" ><input type="number" min="0" (input)="quantity($event)"/></div>
+  <div class="uom desc-border" ><input list="uom_list" />
+  </div>
+  <div class="upi desc-border" ><input type="number" min="0" (input)="price($event)"/></div>
+  <div class="total_col desc-border" ><input type="text" value={{quant*unitprice}} readonly/></div>
+</div>
+<div class="line-add"><input type="button" value="Add line" id="addline" (click)="addFieldValue()"/>&nbsp;</div>
+
+<div class="total-section">
+  <div class="total"><span>Taxable Amount:</span><span>$200</span></div>
+  <div class="total"><span>Add IGST@<input type="number" min="0"/></span><span>$200</span></div>
+  <div class="total"><span>Packing & Forwarding Charges:</span><span>$200</span></div>
+  <div class="total"><span>Round Off:</span><span>$200</span></div>
+</div>
